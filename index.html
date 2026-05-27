@@ -7,85 +7,117 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-
-  <script src="https://kit.fontawesome.com/a2d9d5a64f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<div class="noise"></div>
-<div class="grid"></div>
-<div class="glow"></div>
+<canvas id="c"></canvas>
+<div class="bg-grid"></div>
+<div class="vignette"></div>
 
-<canvas id="liquid"></canvas>
+<div class="corner corner-tl"></div>
+<div class="corner corner-tr"></div>
+<div class="corner corner-bl"></div>
+<div class="corner corner-br"></div>
 
-<div class="main">
+<div class="page">
+  <div class="card" id="card">
 
-  <div class="card glass">
+    <div class="card-band-top"></div>
 
-    <img src="assets/avatar.png" class="avatar" onerror="this.style.display='none'">
+    <header class="card-header">
 
-    <h1>mrguiltyy</h1>
+      <div class="avatar-wrap">
+        <img src="assets/avatar.png" class="avatar" alt="avatar"
+             onerror="this.style.visibility='hidden'">
+      </div>
 
-    <p class="tagline">
-      cyber systems &bull; creative developer &bull; digital architect
-    </p>
+      <h1 class="name">mrguiltyy</h1>
 
-    <div class="buttons">
+      <div class="ruler">
+        <span class="ruler-line"></span>
+        <span class="ruler-gem">◆</span>
+        <span class="ruler-line"></span>
+      </div>
 
-      <a href="https://discord.com/users/mrguiltyy" target="_blank" class="btn discord">
-        <i class="fab fa-discord"></i>
+      <p class="tagline">Creative Developer &nbsp;&middot;&nbsp; Digital Architect &nbsp;&middot;&nbsp; Cyber Systems</p>
+
+    </header>
+
+    <nav class="links">
+
+      <a href="https://discord.com/users/mrguiltyy" target="_blank" class="link-btn">
+        <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.079.11 18.1.131 18.114a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+        </svg>
         Discord
       </a>
 
-      <a href="https://github.com/mrguiltyy" target="_blank" class="btn github">
-        <i class="fab fa-github"></i>
+      <a href="https://github.com/mrguiltyy" target="_blank" class="link-btn">
+        <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+        </svg>
         GitHub
       </a>
 
-      <a href="https://mrguiltyy.github.io" target="_blank" class="btn site">
-        <i class="fas fa-globe"></i>
+      <a href="#" target="_blank" class="link-btn">
+        <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
         Website
       </a>
 
-    </div>
+    </nav>
 
-    <div class="music-player glass-small">
-      <div class="music-info">
-        <span id="song-title">Loading music...</span>
+    <section class="sect">
+      <div class="sect-head">
+        <span class="sh-line"></span>
+        <span class="sh-label">Now Playing</span>
+        <span class="sh-line"></span>
+      </div>
+      <div class="spotify-wrap">
+        <!-- Replace the playlist ID (37i9dQZF1DXcBWIGoYBM5M) with your own Spotify playlist/track ID -->
+        <iframe
+          src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0"
+          width="100%" height="152" frameBorder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <section class="sect">
+      <div class="sect-head">
+        <span class="sh-line"></span>
+        <span class="sh-label">Transmit</span>
+        <span class="sh-line"></span>
       </div>
 
-      <div class="music-controls">
-        <button id="prev">&#9194;</button>
-        <button id="play">&#9654;</button>
-        <button id="next">&#9193;</button>
-      </div>
+      <form id="contact-form">
+        <div class="field-row">
+          <input type="text"  name="name"    placeholder="NAME"    required>
+          <input type="email" name="email"   placeholder="EMAIL"   required>
+        </div>
+        <textarea             name="message" placeholder="MESSAGE" required></textarea>
+        <button type="submit">
+          <span class="btn-gem">◆</span>
+          Send Transmission
+          <span class="btn-gem">◆</span>
+        </button>
+      </form>
 
-      <audio id="audio"></audio>
-    </div>
+      <p id="status"></p>
+    </section>
 
-  </div>
-
-  <div class="contact glass">
-
-    <h2>Contact</h2>
-
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Message" required></textarea>
-      <button type="submit">Send Transmission</button>
-    </form>
-
-    <p id="status"></p>
+    <div class="card-band-bot"></div>
 
   </div>
-
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
