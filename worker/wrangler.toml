@@ -1,0 +1,7 @@
+name = "frenzy-contact"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# After deploying, run:
+#   wrangler secret put WEBHOOK_URL
+# and paste your Discord webhook URL when prompted.

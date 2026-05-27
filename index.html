@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mrguiltyy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://kit.fontawesome.com/a2d9d5a64f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="grid"></div>
+<div class="glow"></div>
+
+<canvas id="liquid"></canvas>
+
+<div class="main">
+
+  <div class="card glass">
+
+    <img src="assets/avatar.png" class="avatar" onerror="this.style.display='none'">
+
+    <h1>mrguiltyy</h1>
+
+    <p class="tagline">
+      cyber systems &bull; creative developer &bull; digital architect
+    </p>
+
+    <div class="buttons">
+
+      <a href="https://discord.com/users/mrguiltyy" target="_blank" class="btn discord">
+        <i class="fab fa-discord"></i>
+        Discord
+      </a>
+
+      <a href="https://github.com/mrguiltyy" target="_blank" class="btn github">
+        <i class="fab fa-github"></i>
+        GitHub
+      </a>
+
+      <a href="https://mrguiltyy.github.io" target="_blank" class="btn site">
+        <i class="fas fa-globe"></i>
+        Website
+      </a>
+
+    </div>
+
+    <div class="music-player glass-small">
+      <div class="music-info">
+        <span id="song-title">Loading music...</span>
+      </div>
+
+      <div class="music-controls">
+        <button id="prev">&#9194;</button>
+        <button id="play">&#9654;</button>
+        <button id="next">&#9193;</button>
+      </div>
+
+      <audio id="audio"></audio>
+    </div>
+
+  </div>
+
+  <div class="contact glass">
+
+    <h2>Contact</h2>
+
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button type="submit">Send Transmission</button>
+    </form>
+
+    <p id="status"></p>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
